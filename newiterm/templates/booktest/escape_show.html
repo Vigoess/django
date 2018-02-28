@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{{ content }}<br>
+{{ content|safe }}<br>
+{{ content|escape }}<br>
+<hr>
+{% autoescape on%}
+    {{ content }}
+    {{ content }}
+    {{ content }}
+    {{ content }}
+    {{ content }}
+    {{ content }}
+    {{ content }}
+    {{ content }}
+{% endautoescape %}
+<hr>
+
+{{ data|default:'<h1>China</h1>' }}
+
+{{ data|default:'&lt;h1&gt;China&lt;/h1&gt;' }}
+
+
+</body>
+</html>

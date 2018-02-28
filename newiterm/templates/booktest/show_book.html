@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+         {% for book in books %}
+             {% if book.id < 2 %}
+                 {{forloop.counter}}
+                <div style="background-color: gold;">{{ book.btitle }}--{{ book.bpub_date|date:'Y-m-d' }}</div>
+             {% elif book.id < 3 %}
+                 {{forloop.counter}}
+              <div style="background-color: palegreen;">{{ book.btitle }}--{{ book.bpub_date|date:'Y-m-d' }}</div>
+             {% else %}
+                 {{forloop.counter}}
+              <div style="background-color: red;">{{ book.btitle }}--{{ book.bpub_date }}</div>
+             {% endif %}
+         {% endfor %}
+
+        {{ books|length }}<br>
+        {{room|default:50 }}<br>
+        {% load mymod %}
+        {{ a|mod:5 }}
+
+</body>
+</html>

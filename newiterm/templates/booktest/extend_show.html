@@ -1,0 +1,13 @@
+{% extends 'booktest/base.html' %}
+
+{% block center %}
+    <div>NBA最新新闻</div>
+    <div>财经新闻部</div>
+{% endblock %}
+{% block run %}
+    <div>联系电话：123456</div>
+{% endblock run %}
+{% block center2 %}
+  {{ block.super }}
+    <p>这是一段信息</p>
+{% endblock %}

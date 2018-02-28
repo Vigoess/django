@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script >
+        $(function () {
+            $('#img1').click(function () {
+                $(this).prop({'src':'verify_code?'+Math.random()})
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+
+<form action="/check_verify" method="post">
+    {% csrf_token %}
+    <input type="text" name="code">
+    <img src="/verify_code" alt="" id="img1">
+    <input type="submit">
+
+
+</form>
+
+
+
+</body>
+</html>

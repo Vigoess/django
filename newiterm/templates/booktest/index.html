@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>book</title>
+</head>
+<body>
+<div>主页</div>
+<hr>
+{% for foo in books %}
+<div>{{ foo.btitle }}</div>
+{% endfor %}
+
+<hr>
+<div>{{ book.btitle }}</div>
+<hr>
+最小评论数{{ num }}
+<hr>
+{{ dict_bread }}
+
+
+
+</body>
+</html>
